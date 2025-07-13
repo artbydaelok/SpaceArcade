@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://kwwtrr4mp3ub"]
+
+[ext_resource type="Shader" uid="uid://b3p1n4wojqy7j" path="res://vfx/shaders/paddle_material.gdshader" id="1_g15qy"]
+[ext_resource type="Gradient" uid="uid://fy6mh6wy5rbb" path="res://vfx/gradients/lighter.tres" id="2_g15qy"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l3jg1"]
+gradient = ExtResource("2_g15qy")
+
+[resource]
+shader = ExtResource("1_g15qy")
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_l3jg1")

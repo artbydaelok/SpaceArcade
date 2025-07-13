@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mi8tmkxn6b1u"
+path="res://.godot/imported/guitar solos from space.wav-23dbf001e69409cb74e42dd84502500a.sample"
+
+[deps]
+
+source_file="res://EarthBouncer/music/guitar solos from space.wav"
+dest_files=["res://.godot/imported/guitar solos from space.wav-23dbf001e69409cb74e42dd84502500a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
