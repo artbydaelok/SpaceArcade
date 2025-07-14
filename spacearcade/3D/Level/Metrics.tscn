@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://dy3cyvu1sfks7"]
+
+[ext_resource type="PackedScene" uid="uid://dfae0b1tbc6l" path="res://3D/Player/Player_HUB.tscn" id="1_yugge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yugge"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_ibywe"]
+sky_material = SubResource("ProceduralSkyMaterial_yugge")
+
+[sub_resource type="Environment" id="Environment_8aosr"]
+background_mode = 2
+sky = SubResource("Sky_ibywe")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yugge"]
+albedo_color = Color(0.227245, 0.4436, 0.397869, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ibywe"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yugge"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8aosr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(184.907, 0, 0, 0, 0.0908631, 0, 0, 0, 226.048, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_yugge")
+use_collision = true
+mesh = SubResource("BoxMesh_ibywe")
+
+[node name="Player_HUB" parent="." instance=ExtResource("1_yugge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.414947, 1.07371, 1.14009)
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+transform = Transform3D(5.79407, 0, 0, 0, 5.79407, 0, 0, 0, 5.79407, -5.82141, 1.28793, -11.7857)
+mesh = SubResource("BoxMesh_yugge")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
+transform = Transform3D(-12.3682, 0, 0, 0, 5.79407, 0, 0, 0, -12.3682, 14.6327, 2.20825, -30.4109)
+mesh = SubResource("BoxMesh_yugge")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="."]
+transform = Transform3D(-12.3682, 0, 0, 0, 5.79407, 0, 0, 0, -12.3682, 19.1441, 2.20825, -1.94948)
+mesh = SubResource("BoxMesh_yugge")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="."]
+transform = Transform3D(-40.6102, 0, 0, 0, 10.7853, 0, 0, 0, -27.7152, -19.173, 2.20825, -41.2477)
+mesh = SubResource("BoxMesh_yugge")
